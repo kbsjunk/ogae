@@ -1,0 +1,14 @@
++--------+----------+-------------------------+------+------------------------------------------------------------------+------------+
+| Domain | Method   | URI                     | Name | Action                                                           | Middleware |
++--------+----------+-------------------------+------+------------------------------------------------------------------+------------+
+|        | GET|HEAD | login                   |      | Ogae\Http\Controllers\Auth\AuthController@showLoginForm          | web,guest  |
+|        | POST     | login                   |      | Ogae\Http\Controllers\Auth\AuthController@login                  | web,guest  |
+|        | GET|HEAD | login/facebook          |      | Ogae\Http\Controllers\Auth\AuthController@redirect               | web,guest  |
+|        | GET|HEAD | login/facebook/callback |      | Ogae\Http\Controllers\Auth\AuthController@callback               | web,guest  |
+|        | GET|HEAD | logout                  |      | Ogae\Http\Controllers\Auth\AuthController@logout                 | web        |
+|        | POST     | password/email          |      | Ogae\Http\Controllers\Auth\PasswordController@sendResetLinkEmail | web,guest  |
+|        | POST     | password/reset          |      | Ogae\Http\Controllers\Auth\PasswordController@reset              | web,guest  |
+|        | GET|HEAD | password/reset/{token?} |      | Ogae\Http\Controllers\Auth\PasswordController@showResetForm      | web,guest  |
+|        | GET|HEAD | register                |      | Ogae\Http\Controllers\Auth\AuthController@showRegistrationForm   | web,guest  |
+|        | POST     | register                |      | Ogae\Http\Controllers\Auth\AuthController@register               | web,guest  |
++--------+----------+-------------------------+------+------------------------------------------------------------------+------------+
